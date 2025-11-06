@@ -1,0 +1,37 @@
+@import "fonts.css";
+@import "reset.css";
+@import "global.css";
+
+@import "header.css";
+@import "footer.css";
+
+.main {
+    position: relative; /* Нужно для позиционирования псевдоэлемента */
+    padding: 140px 0;
+    background: url(../img/bg-main.jpg) 50% 50% / cover no-repeat;
+}
+
+/* Добавляем псевдоэлемент для затемнения */
+.main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.817); /* черный цвет с прозрачностью 50% */
+    z-index: 1; /* размещаем поверх фона, но под содержанием */
+}
+
+.main > * {
+    position: relative; /* чтобы содержимое было поверх псевдоэлемента */
+    z-index: 2;
+}
+
+.title {
+    color: #ffffff;
+    padding-bottom: 55px;
+}
+.title__text {
+    color: aliceblue;
+}

@@ -1,0 +1,59 @@
+:root {
+    --transition: all .4s;
+    --border-radius: 20px;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5vw;
+}
+
+.body {
+    font-family: "Montserrat", "Arial", sans-serif;
+    line-height: 1.5;
+    color: var(--general-text);
+    background: var(--general-bg);
+}
+
+.wrapper {
+    min-height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.container {
+    max-width: 1310px;
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 100%;
+}
+
+.title {
+    font-family: 'Gabriola';
+    font-size: 74px;
+    line-height: 0.82;
+    color: #4f1d88;
+}
+
+.button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent-color);
+    border-radius: 100px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 3px 15px;
+    height: 62px;
+
+    transition: var(--transition);
+}
+
+.button:hover {
+    background: #FF9138;
+}
